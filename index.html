@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="table">
+
+    </div>
+    <script type="text/javascript" src="js/vtable.js"></script>
+    <script type="text/javascript">
+      var table=new vTable({
+        "selector":".table",
+        "row":2,
+        "column":4,
+        "style":"table table-responsive table-striped",
+        "mode":"editable",
+        "url":"http://localhost/sample/",
+        "method":"post",
+        "optional_data":{"auth":"tqetrweqretqwet"},
+        "identifier" : "id",
+        "columns" : ["id","name","age","Reg no"],
+        "editableColumns" : [["name","text"],["age","select",{"12":"12","13":"13","14":"14"}]],
+        "values":[
+                  [1,"vijay",12,"reg no"],
+                  [2,"shane",13,"reg no"]
+                ]
+      });
+    </script>
+  </body>
+</html>
